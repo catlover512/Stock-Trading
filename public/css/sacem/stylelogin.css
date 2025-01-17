@@ -1,0 +1,211 @@
+:root {
+    --color-primary: #534F4F;
+    --color-secondary: #6185a6;
+    --color-tertiary: #F4C5A2;
+    --color-text: rgba(22, 22, 22, .7);
+    --color-accent: #0E0E0E;
+    --color-white: #fff;
+    --color-transparent: #ffffff00;
+    --color-gray: #A9A7A7;
+    --color-light: #E0F1EF;
+    --color-lightGreen: #CCDCDA;
+
+    --color-blue: #173854;
+    --color-red: #E21B23;
+    --color-darkenblue: #175a98;
+    --color-darkblue: #173854;
+    --color-yellow: #eaad00;
+}
+
+body {
+    background-image: url(../../img/sacem/login-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+header {
+    display: none;
+}
+
+#navPanel {
+    display: none;
+}
+
+footer {
+    display: none;
+}
+
+.main {
+    padding: 15px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    width: 600px;
+    padding: 30px 15px;
+    background: #fff;
+    border-radius: 1px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+    position: relative;
+    color: var(--color-text);
+    overflow: hidden;
+}
+
+.login::before {
+    content: '';
+    width: 100%;
+    height: 5px;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo-w3 {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 20px;
+}
+
+.logo-w3 img {
+    display: block;
+    width: 120px;
+}
+
+.w3layouts-main h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+form input {
+    outline: none;
+    font-size: 16px;
+    border: 1px solid var(--color-blue);
+    background: transparent;
+    padding: 8px 10px;
+    border-radius: 6px;
+    color: #141414;
+}
+
+form input::placeholder {
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+form input:focus {
+    outline: none;
+    outline-offset: 0;
+    border-color: rgba(0, 113, 234, 0.5);
+    box-shadow: 0 0 3px rgba(0, 129, 234, 0.5);
+    transition: border-color .3s;
+}
+
+form input:focus::placeholder {
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.main-w3l form input {
+    margin-bottom: 10px;
+}
+
+.main-w3l form button {
+    margin: 20px auto;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.main-w3l .link-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-w3l .link-block a {
+    display: block;
+    margin: 0 10px;
+    color: #141414;
+    font-size: 16px;
+    font-weight: 600;
+    opacity: 1;
+    transition: .3s;
+}
+
+.main-w3l .link-block a:hover {
+    opacity: .5;
+}
+
+.captcha {
+    display: flex;
+    align-items: center;
+}
+
+.captcha img {
+    display: block;
+    height: 32px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.checkbox-content {
+    margin-top: 10px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.checkbox-content .check-box {
+    display: inline-block;
+    width: auto;
+    box-shadow: none;
+    padding: 0;
+    height: 15px;
+    margin-bottom: 0;
+}
+
+.policy-link {
+    color: var(--color-yellow);
+    font-weight: 700;
+}
+
+/* policy */
+.policy {
+    padding: 30px 15px;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 1px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    color: #141414;
+    font-weight: 600;
+}
+
+.policy::before {
+    content: '';
+    width: 100%;
+    height: 5px;
+    background-color: var(--color-darkenblue);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/* RWD */
+@media screen and (min-width:1024px) {
+
+    .login {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .policy {
+        padding: 30px;
+        max-width: 1200px;
+    }
+}
